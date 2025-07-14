@@ -119,12 +119,25 @@ const experiences = [
     company_name: "Amantya Technologies Pvt. Ltd.",
     icon: amantya,
     iconBg: "#E0E7FF",
-    date: "Nov 2023 – Present",
+    date: "Nov 2024 – Present",
     points: [
       "Developed and deployed a real-time DXF Export Module using React.js, TypeScript, and VertiGIS SDK, improving data export efficiency by 30%.",
       "Built dynamic panels for export configuration and log tracking with filters, pagination, and real-time API integration.",
       "Implemented multilingual support and optimized frontend performance, reducing load time by 35%.",
       "Worked in Agile teams using GitHub and Azure Boards for version control and task management.",
+    ],
+  },
+
+  {
+    title: "Web Developer Intern",
+    company_name: "NIELIT (Govt. of India)",
+    icon: nielit,
+    iconBg: "#FEF9C3",
+    date: "Mar 2024 – Aug 2024",
+    points: [
+      "Built a full-stack Corporate Learning Portal using the MERN stack, enabling access to training materials for 5000+ users.",
+      "Automated certificate generation and performance analytics using Chart.js.",
+      "Focused on clean, reusable components and REST API design for long-term scalability.",
     ],
   },
   {
@@ -137,18 +150,6 @@ const experiences = [
       "Enhanced the HackerBlocks platform dashboard using React.js and Shadcn/UI to improve UX and responsiveness.",
       "Implemented DSA questions with backend evaluation logic using Node.js and managed leaderboard with MongoDB.",
       "Collaborated with mentors in a sprint-based dev workflow to ship features for live users.",
-    ],
-  },
-  {
-    title: "Web Developer Intern",
-    company_name: "NIELIT (Govt. of India)",
-    icon: nielit,
-    iconBg: "#FEF9C3",
-    date: "Mar 2023 – Aug 2023",
-    points: [
-      "Built a full-stack Corporate Learning Portal using the MERN stack, enabling access to training materials for 5000+ users.",
-      "Automated certificate generation and performance analytics using Chart.js.",
-      "Focused on clean, reusable components and REST API design for long-term scalability.",
     ],
   },
 ];
