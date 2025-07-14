@@ -1,6 +1,8 @@
 import logo from "./codinglogo.jpg";
 import backend from "./backend.png";
+import cbse from "./education/cbse.png";
 import creator from "./creator.png";
+import dtu from "./education/dtu.png";
 import mobile from "./mobile.png";
 import web from "./web.png";
 import github from "./github.png";
@@ -33,10 +35,12 @@ export {
   logo,
   backend,
   creator,
+  dtu,
   mobile,
   web,
   github,
   menu,
+  cbse,
   close,
   css,
   docker,
