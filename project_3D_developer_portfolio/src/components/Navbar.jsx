@@ -57,7 +57,17 @@ const Navbar = () => {
             >
               <a href={`#${nav.id}`}>{nav.title}</a>
             </li>
+
           ))}
+          <li>
+            <a
+              href="/resume.pdf"
+              download
+              className="ml-4 bg-transparent text-white px-4 py-2 rounded-md shadow hover:bg-primary transition font-medium"
+            >
+              Download Resume
+            </a>
+          </li>
         </ul>
 
         <div className='sm:hidden flex flex-1 justify-end items-center'>
