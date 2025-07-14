@@ -1,7 +1,9 @@
 import {
   mobile,
   backend,
+  cbse,
   creator,
+  dtu,
   web,
   javascript,
   typescript,
@@ -153,6 +155,48 @@ const experiences = [
     ],
   },
 ];
+const education = [
+  {
+    degree: "Bachelor of Technology in Computer Engineering",
+    institution: "Delhi Technological University (DTU)",
+    icon: dtu,
+    iconBg: "#D1FAE5",
+    date: "August 2020 – July 2024",
+    percentage: "84.60%",
+    points: [
+      "Maintained a strong GPA of 8.46/10.",
+      "Completed final year project on Hate Speech Detection using deep learning models like BERT, RoBERTa, BiLSTM.",
+      "Ranked in top 1% in JEE Advanced 2020.",
+    ],
+  },
+  {
+    degree: "Class XII – Senior Secondary Education (CBSE)",
+    institution: "Geeta Bal Bharti Sr. Sec. School, Delhi",
+    icon: cbse,
+    iconBg: "#E0F2FE",
+    date: "April 2019 – March 2020",
+    percentage: "92%",
+    points: [
+      "Focused on Physics, Chemistry, and Mathematics (PCM).",
+      "Consistently performed in the top percentile of the class.",
+      "Highest score in Mathematics with 96%.",
+      "Above 95% each in Physics , Chemistry & Mathematics",
+    ],
+  },
+  {
+    degree: "Class X – Secondary Education (CBSE)",
+    institution: "Geeta Bal Bharti Sr. Sec. School, Delhi",
+    icon: cbse,
+    iconBg: "#F0F9FF",
+    date: "April 2017 – March 2018",
+    percentage: "91.4%",
+    points: [
+      "Secured 91.4% overall in Class X Board Examinations.",
+      "Achieved 95% in Mathematics and Science.",
+      "Actively participated in extracurricular sports and competitions.",
+    ],
+  },
+];
 
 const projects = [
   {
@@ -220,4 +264,4 @@ const projects = [
   },
 ];
 
-export { services, technologies, experiences, projects };
+export { services, technologies, education, experiences, projects };
