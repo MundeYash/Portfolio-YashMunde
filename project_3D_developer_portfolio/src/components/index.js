@@ -10,6 +10,7 @@ import About from "./About";
 import Tech from "./Tech";
 import Education from "./Education";
 import Experience from "./Experience";
+import Footer from "./Footer";
 import Works from "./Works";
 import Contact from "./Contact";
 import CanvasLoader from "./Loader";
@@ -21,6 +22,7 @@ export {
   Tech,
   Education,
   Experience,
+  Footer,
   Works,
   Contact,
   CanvasLoader,
