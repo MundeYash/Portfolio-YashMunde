@@ -32,7 +32,7 @@ const ExperienceCard = ({ experience }) => {
         </div>
       }
     >
-      <div className="bg-primary dark:bg-white rounded-lg p-2 transition-colors duration-300">
+      <div className=" dark:bg-white rounded-lg p-2 transition-colors duration-300">
         <h3 className="text-white dark:text-cyan-700 text-[24px] font-bold transition-colors duration-300">
           {experience.title}
         </h3>
@@ -44,7 +44,7 @@ const ExperienceCard = ({ experience }) => {
         </p>
       </div>
 
-      <ul className="mt-5 list-disc ml-5 space-y-2 bg-primary dark:bg-white transition-colors duration-300">
+      <ul className="mt-5 list-disc ml-5 space-y-2  dark:bg-white transition-colors duration-300">
         {experience.points.map((point, index) => (
           <li
             key={`experience-point-${index}`}

@@ -32,7 +32,7 @@ const EducationCard = ({ edu }) => {
         </div>
       }
     >
-      <div className="dark:bg-white rounded-lg p-2 transition-colors duration-300">
+      <div className=" dark:bg-white rounded-lg p-2 transition-colors duration-300">
         <h3 className="text-white dark:text-cyan-700 text-[22px] font-bold transition-colors duration-300">
           {edu.degree}
         </h3>
@@ -46,7 +46,7 @@ const EducationCard = ({ edu }) => {
           {edu.percentage && `Score: ${edu.percentage}`}
         </p>
       </div>
-      <ul className="mt-4 list-disc ml-5 space-y-2">
+      <ul className="mt-4 list-disc ml-5 space-y-2  dark:bg-white transition-colors duration-300">
         {edu.points.map((point, idx) => (
           <li
             key={`edu-point-${idx}`}
