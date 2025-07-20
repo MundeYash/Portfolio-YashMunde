@@ -28,13 +28,11 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`${
-        styles.paddingX
-      } w-full flex items-center py-5 fixed top-0 z-20 transition-colors duration-300 ${
-        scrolled
+      className={`${styles.paddingX
+        } w-full flex items-center py-5 fixed top-0 z-20 transition-colors duration-300 ${scrolled
           ? "bg-primary dark:bg-white"
           : "bg-transparent dark:bg-white/80"
-      }`}
+        }`}
     >
       <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
         <Link
@@ -63,11 +61,10 @@ const Navbar = () => {
           {navLinks.map((nav) => (
             <li
               key={nav.id}
-              className={`${
-                active === nav.title
-                  ? "text-white dark:text-cyan-600"
-                  : "text-secondary dark:text-gray-700"
-              } hover:text-white dark:hover:text-cyan-600 text-[18px] font-medium cursor-pointer transition-colors duration-300`}
+              className={`${active === nav.title
+                ? "text-white dark:text-cyan-600"
+                : "text-secondary dark:text-gray-700"
+                } hover:text-white dark:hover:text-cyan-600 text-[18px] font-medium cursor-pointer transition-colors duration-300`}
               onClick={() => setActive(nav.title)}
             >
               <a href={`#${nav.id}`}>{nav.title}</a>
@@ -82,6 +79,9 @@ const Navbar = () => {
               Download Resume
             </a>
           </li>
+
+        </ul>
+        <ul>
           <li>
             <ThemeToggleButton />
           </li>
@@ -96,19 +96,17 @@ const Navbar = () => {
           />
 
           <div
-            className={`${
-              !toggle ? "hidden" : "flex"
-            } p-6 black-gradient dark:bg-white dark:text-gray-900 absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl transition-colors duration-300`}
+            className={`${!toggle ? "hidden" : "flex"
+              } p-6 black-gradient dark:bg-white dark:text-gray-900 absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl transition-colors duration-300`}
           >
             <ul className="list-none flex justify-end items-start flex-1 flex-col gap-4">
               {navLinks.map((nav) => (
                 <li
                   key={nav.id}
-                  className={`font-poppins font-medium cursor-pointer text-[16px] ${
-                    active === nav.title
-                      ? "text-white dark:text-cyan-600"
-                      : "text-secondary dark:text-gray-700"
-                  } transition-colors duration-300`}
+                  className={`font-poppins font-medium cursor-pointer text-[16px] ${active === nav.title
+                    ? "text-white dark:text-cyan-600"
+                    : "text-secondary dark:text-gray-700"
+                    } transition-colors duration-300`}
                   onClick={() => {
                     setToggle(!toggle);
                     setActive(nav.title);
