@@ -24,7 +24,7 @@ const ProjectCard = ({
           scale: 1,
           speed: 450,
         }}
-        className='bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full'
+        className='bg-tertiary dark:bg-white dark:border-spacing-11 dark:border-blue-500 p-5 rounded-2xl sm:w-[360px] w-full transition-colors duration-300'
       >
         <div className='relative w-full h-[230px]'>
           <img
@@ -36,7 +36,7 @@ const ProjectCard = ({
           <div className='absolute inset-0 flex justify-end m-3 card-img_hover'>
             <div
               onClick={() => window.open(source_code_link, "_blank")}
-              className='black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer'
+              className='black-gradient dark:bg-cyan-100 w-10 h-10 rounded-full flex justify-center items-center cursor-pointer transition-colors duration-300'
             >
               <img
                 src={github}
@@ -48,15 +48,15 @@ const ProjectCard = ({
         </div>
 
         <div className='mt-5'>
-          <h3 className='text-white font-bold text-[24px]'>{name}</h3>
-          <p className='mt-2 text-secondary text-[14px]'>{description}</p>
+          <h3 className='text-white dark:text-cyan-700 font-bold text-[24px] transition-colors duration-300'>{name}</h3>
+          <p className='mt-2 text-secondary dark:text-gray-700 text-[14px] transition-colors duration-300'>{description}</p>
         </div>
 
         <div className='mt-4 flex flex-wrap gap-2'>
           {tags.map((tag) => (
             <p
               key={`${name}-${tag.name}`}
-              className={`text-[14px] ${tag.color}`}
+              className={`text-[14px] ${tag.color} dark:text-cyan-700 transition-colors duration-300`}
             >
               #{tag.name}
             </p>
@@ -72,7 +72,7 @@ const Works = () => {
     <>
       <motion.div variants={textVariant()}>
         <p className={`${styles.sectionSubText} `}>My work</p>
-        <h2 className={`${styles.sectionHeadText}`}>Projects.</h2>
+        <h2 className={`${styles.sectionHeadText} dark:text-black`}>Projects.</h2>
       </motion.div>
 
       <div className='w-full flex'>
