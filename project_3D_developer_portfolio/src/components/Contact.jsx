@@ -6,9 +6,11 @@ import { styles } from "../styles";
 import { EarthCanvas } from "./canvas";
 import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
+import { useToast } from "../ToastContext";
 
 const Contact = () => {
   const formRef = useRef();
+  const { showToast } = useToast();
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -16,6 +18,7 @@ const Contact = () => {
   });
 
   const [loading, setLoading] = useState(false);
+  const [errors, setErrors] = useState({});
 
   const handleChange = (e) => {
     const { target } = e;
@@ -25,10 +28,52 @@ const Contact = () => {
       ...form,
       [name]: value,
     });
+
+    // Clear error when user starts typing
+    if (errors[name]) {
+      setErrors({
+        ...errors,
+        [name]: ""
+      });
+    }
+  };
+
+  const validateForm = () => {
+    const newErrors = {};
+
+    // Name validation
+    if (!form.name.trim()) {
+      newErrors.name = "Name is required";
+    } else if (form.name.trim().length < 2) {
+      newErrors.name = "Name must be at least 2 characters long";
+    }
+
+    // Email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!form.email.trim()) {
+      newErrors.email = "Email is required";
+    } else if (!emailRegex.test(form.email)) {
+      newErrors.email = "Please enter a valid email address";
+    }
+
+    // Message validation
+    if (!form.message.trim()) {
+      newErrors.message = "Message is required";
+    } else if (form.message.trim().length < 10) {
+      newErrors.message = "Message must be at least 10 characters long";
+    }
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    if (!validateForm()) {
+      return;
+    }
+
     setLoading(true);
 
     emailjs
@@ -47,19 +92,27 @@ const Contact = () => {
       .then(
         () => {
           setLoading(false);
-          alert("Thank you. I will get back to you as soon as possible.");
+          showToast(
+            "success",
+            "Message Sent Successfully!",
+            "Thank you for reaching out.I will get back to you as soon as possible"
+          );
 
           setForm({
             name: "",
             email: "",
             message: "",
           });
+          setErrors({});
         },
         (error) => {
           setLoading(false);
           console.error(error);
-
-          alert("Ahh, something went wrong. Please try again.");
+          showToast(
+            "error",
+            "Oops! Something went wrong",
+            "Please check your connection and try again."
+          );
         }
       );
   };
@@ -98,8 +151,14 @@ const Contact = () => {
               value={form.name}
               onChange={handleChange}
               placeholder="What's your good name?"
-              className="bg-tertiary dark:bg-cyan-100 py-4 px-6 placeholder:text-secondary dark:placeholder:text-cyan-700 text-white dark:text-gray-900 rounded-lg outline-none border-none font-medium transition-colors duration-300"
+              className={`bg-tertiary dark:bg-cyan-100 py-4 px-6 placeholder:text-secondary dark:placeholder:text-cyan-700 text-white dark:text-gray-900 rounded-lg outline-none border-none font-medium transition-colors duration-300 ${errors.name ? "border-2 border-red-500" : ""
+                }`}
             />
+            {errors.name && (
+              <span className="text-red-500 dark:text-red-600 text-sm mt-2 transition-colors duration-300">
+                {errors.name}
+              </span>
+            )}
           </label>
           <label className="flex flex-col">
             <span className="text-white dark:text-cyan-700 font-medium mb-4 transition-colors duration-300">
@@ -111,8 +170,14 @@ const Contact = () => {
               value={form.email}
               onChange={handleChange}
               placeholder="What's your web address?"
-              className="bg-tertiary dark:bg-cyan-100 py-4 px-6 placeholder:text-secondary dark:placeholder:text-cyan-700 text-white dark:text-gray-900 rounded-lg outline-none border-none font-medium transition-colors duration-300"
+              className={`bg-tertiary dark:bg-cyan-100 py-4 px-6 placeholder:text-secondary dark:placeholder:text-cyan-700 text-white dark:text-gray-900 rounded-lg outline-none border-none font-medium transition-colors duration-300 ${errors.email ? "border-2 border-red-500" : ""
+                }`}
             />
+            {errors.email && (
+              <span className="text-red-500 dark:text-red-600 text-sm mt-2 transition-colors duration-300">
+                {errors.email}
+              </span>
+            )}
           </label>
           <label className="flex flex-col">
             <span className="text-white dark:text-cyan-700 font-medium mb-4 transition-colors duration-300">
@@ -124,8 +189,14 @@ const Contact = () => {
               value={form.message}
               onChange={handleChange}
               placeholder="What you want to say?"
-              className="bg-tertiary dark:bg-cyan-100 py-4 px-6 placeholder:text-secondary dark:placeholder:text-cyan-700 text-white dark:text-gray-900 rounded-lg outline-none border-none font-medium transition-colors duration-300"
+              className={`bg-tertiary dark:bg-cyan-100 py-4 px-6 placeholder:text-secondary dark:placeholder:text-cyan-700 text-white dark:text-gray-900 rounded-lg outline-none border-none font-medium transition-colors duration-300 ${errors.message ? "border-2 border-red-500" : ""
+                }`}
             />
+            {errors.message && (
+              <span className="text-red-500 dark:text-red-600 text-sm mt-2 transition-colors duration-300">
+                {errors.message}
+              </span>
+            )}
           </label>
 
           <button

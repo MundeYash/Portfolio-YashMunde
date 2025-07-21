@@ -15,6 +15,7 @@ import Footer from "./Footer";
 import Works from "./Works";
 import Contact from "./Contact";
 import CanvasLoader from "./Loader";
+import Toast from "./Toast";
 
 export {
   Hero,
@@ -32,4 +33,5 @@ export {
   ComputersCanvas,
   StarsCanvas,
   SkyCanvas,
+  Toast,
 };
