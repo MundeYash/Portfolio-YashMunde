@@ -200,30 +200,9 @@ const education = [
 
 const projects = [
   {
-    name: "Car Rent",
+    name: "Job Board Portal",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
-    tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "mongodb",
-        color: "green-text-gradient",
-      },
-      {
-        name: "tailwind",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: carrent,
-    source_code_link: "https://github.com/",
-  },
-  {
-    name: "Job IT",
-    description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+      "A job search web application inspired by LinkedIn Jobs, allowing users to browse job listings, view roles based on skillset and location, and filter by company or job type. Features responsive UI and REST API integration.",
     tags: [
       {
         name: "react",
@@ -238,29 +217,50 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: jobit,
-    source_code_link: "https://github.com/",
+    image: jobit, // Replace this with your actual image import or path
+    source_code_link: "https://github.com/MundeYash",
   },
   {
-    name: "Trip Guide",
+    name: "Employee Resource Portal",
     description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+      "A MERN stack-based internal portal to manage employee data, assign certificate numbers, and organize batch training details with secure JWT-based authentication for admins and operators.",
     tags: [
       {
-        name: "nextjs",
+        name: "mern",
         color: "blue-text-gradient",
       },
       {
-        name: "supabase",
+        name: "jwt",
         color: "green-text-gradient",
       },
       {
-        name: "css",
+        name: "tailwind",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: carrent, // Replace this with your actual image import or path
+    source_code_link: "https://github.com/MundeYash",
+  },
+  {
+    name: "Fitness Web Application",
+    description:
+      "A full-stack fitness platform that allows users to search and explore exercises using RapidAPI, track workout routines, and watch YouTube demo videos. Built with React.js and integrated with Google APIs for video content.",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "rapidapi",
+        color: "green-text-gradient",
+      },
+      {
+        name: "googleapi",
         color: "pink-text-gradient",
       },
     ],
     image: tripguide,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/MundeYash",
   },
 ];
 
