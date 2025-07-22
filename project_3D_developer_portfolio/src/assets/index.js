@@ -29,7 +29,8 @@ import codingblocks from "./company/codingblocks.png";
 
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
-import tripguide from "./tripguide.png";
+import employeeportal from "./employeeportal.png";
+import fitnessapp from "./fitnessapp.png";
 
 export {
   logo,
@@ -60,5 +61,6 @@ export {
   threejs,
   carrent,
   jobit,
-  tripguide,
+  employeeportal,
+  fitnessapp,
 };

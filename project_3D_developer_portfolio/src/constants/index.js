@@ -22,8 +22,9 @@ import {
   docker,
   carrent,
   jobit,
-  tripguide,
+  fitnessapp,
   threejs,
+  employeeportal,
 } from "../assets";
 
 export const navLinks = [
@@ -217,7 +218,7 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: jobit, // Replace this with your actual image import or path
+    image: jobit,
     source_code_link: "https://github.com/MundeYash",
   },
   {
@@ -238,7 +239,7 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: carrent, // Replace this with your actual image import or path
+    image: employeeportal,
     source_code_link: "https://github.com/MundeYash",
   },
   {
@@ -259,7 +260,7 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: tripguide,
+    image: fitnessapp,
     source_code_link: "https://github.com/MundeYash",
   },
 ];
