@@ -20,7 +20,9 @@ const ThemeToggleButton = () => {
       onClick={toggleTheme && handleClick}
       className="p-2 px-4 rounded bg-gray-200 dark:bg-gray-800 text-black dark:text-white transition"
     >
-      {theme === "light" ? "☀️  Switch to Light Mode" : "🌙 Switch to Dark Mode"}
+      {theme === "light"
+        ? "☀️  Switch to Light Mode"
+        : "🌙 Switch to Dark Mode"}
     </button>
   );
 };

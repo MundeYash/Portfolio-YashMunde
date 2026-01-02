@@ -33,7 +33,7 @@ const Contact = () => {
     if (errors[name]) {
       setErrors({
         ...errors,
-        [name]: ""
+        [name]: "",
       });
     }
   };
@@ -87,7 +87,7 @@ const Contact = () => {
           to_email: "yashmunde68@gmail.com",
           message: form.message,
         },
-        import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
+        import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY,
       )
       .then(
         () => {
@@ -95,7 +95,7 @@ const Contact = () => {
           showToast(
             "success",
             "Message Sent Successfully!",
-            "Thank you for reaching out.I will get back to you as soon as possible"
+            "Thank you for reaching out.I will get back to you as soon as possible",
           );
 
           setForm({
@@ -111,9 +111,9 @@ const Contact = () => {
           showToast(
             "error",
             "Oops! Something went wrong",
-            "Please check your connection and try again."
+            "Please check your connection and try again.",
           );
-        }
+        },
       );
   };
 
@@ -151,8 +151,9 @@ const Contact = () => {
               value={form.name}
               onChange={handleChange}
               placeholder="What's your good name?"
-              className={`bg-tertiary dark:bg-cyan-100 py-4 px-6 placeholder:text-secondary dark:placeholder:text-cyan-700 text-white dark:text-gray-900 rounded-lg outline-none border-none font-medium transition-colors duration-300 ${errors.name ? "border-2 border-red-500" : ""
-                }`}
+              className={`bg-tertiary dark:bg-cyan-100 py-4 px-6 placeholder:text-secondary dark:placeholder:text-cyan-700 text-white dark:text-gray-900 rounded-lg outline-none border-none font-medium transition-colors duration-300 ${
+                errors.name ? "border-2 border-red-500" : ""
+              }`}
             />
             {errors.name && (
               <span className="text-red-500 dark:text-red-600 text-sm mt-2 transition-colors duration-300">
@@ -170,8 +171,9 @@ const Contact = () => {
               value={form.email}
               onChange={handleChange}
               placeholder="What's your web address?"
-              className={`bg-tertiary dark:bg-cyan-100 py-4 px-6 placeholder:text-secondary dark:placeholder:text-cyan-700 text-white dark:text-gray-900 rounded-lg outline-none border-none font-medium transition-colors duration-300 ${errors.email ? "border-2 border-red-500" : ""
-                }`}
+              className={`bg-tertiary dark:bg-cyan-100 py-4 px-6 placeholder:text-secondary dark:placeholder:text-cyan-700 text-white dark:text-gray-900 rounded-lg outline-none border-none font-medium transition-colors duration-300 ${
+                errors.email ? "border-2 border-red-500" : ""
+              }`}
             />
             {errors.email && (
               <span className="text-red-500 dark:text-red-600 text-sm mt-2 transition-colors duration-300">
@@ -189,8 +191,9 @@ const Contact = () => {
               value={form.message}
               onChange={handleChange}
               placeholder="What you want to say?"
-              className={`bg-tertiary dark:bg-cyan-100 py-4 px-6 placeholder:text-secondary dark:placeholder:text-cyan-700 text-white dark:text-gray-900 rounded-lg outline-none border-none font-medium transition-colors duration-300 ${errors.message ? "border-2 border-red-500" : ""
-                }`}
+              className={`bg-tertiary dark:bg-cyan-100 py-4 px-6 placeholder:text-secondary dark:placeholder:text-cyan-700 text-white dark:text-gray-900 rounded-lg outline-none border-none font-medium transition-colors duration-300 ${
+                errors.message ? "border-2 border-red-500" : ""
+              }`}
             />
             {errors.message && (
               <span className="text-red-500 dark:text-red-600 text-sm mt-2 transition-colors duration-300">
